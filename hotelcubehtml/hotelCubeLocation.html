@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<HTML ng-app="workBuildings">
+   <HEAD>
+      Hotel Cube Location
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"> </script>
+      <script src="script/buildingInfo.js"> </script>
+   </HEAD>
+
+   <Body>
+   <Div ng-controller="myHotelCubes">
+      <Table>
+        <THEAD>
+         <TD>Name</TD>
+         <TD>Address </TD>
+         <TD>City </TD>
+         <TD>State and Zip </TD>
+        </THEAD> 
+      </Table>
+
+      <Table>
+         <TR ng-repeat="hotelCube in hotelCubes">
+           <TD> <a ID  href="" ng-click="showBuildingFloors()">{{hotelCube.name}}</a></TD>
+           <TD>{{hotelCube.address}}</TD>
+           <TD>{{hotelCube.city}}</TD>
+           <TD>{{hotelCube.state}}</TD>
+         </TR>
+      </Table>
+      <BR>
+        Number of Clicks:{{numberOfClicks}}
+      </BR>
+   </Div>
+   </Body>
+</HTML>
